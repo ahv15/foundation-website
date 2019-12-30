@@ -300,10 +300,14 @@
                    required
                    md-no-asterisk
                    name="fullName"
-                   ng-model="fullName">
+                   ng-model="fullName"
+                   ng-pattern="/^[A-Za-z \.]+$/">
             <div ng-messages="userContactsForm.fullName.$error">
               <div ng-message="required">
                 Please enter your full name.
+              </div>
+              <div ng-message="pattern">
+                Please enter a valid name.
               </div>
             </div>
           </md-input-container>
